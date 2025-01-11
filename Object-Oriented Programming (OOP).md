@@ -1,6 +1,6 @@
-Object-Oriented Programming (OOP)
+# Object-Oriented Programming (OOP)
 
-Sure! Let's break down **Object-Oriented Programming (OOP)** and its concepts in simple terms, along with **PHP examples** and real-life analogies to make it super easy to understand. I'll also make sure not to leave out any important details.
+Let's break down **Object-Oriented Programming (OOP)** and its concepts in simple terms, along with **PHP examples** and real-life analogies to make it super easy to understand. I'll also make sure not to leave out any important details.
 
 ---
 
