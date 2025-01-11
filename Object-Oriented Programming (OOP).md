@@ -268,14 +268,8 @@ echo Math::add(5, 10); // Output: 15
 
 ---
 
-### **Conclusion**
-OOP in PHP helps write cleaner, reusable, and modular code. It organizes programs into **classes** and **objects**, which is similar to how real-life things are organized. Happy Coding! 😊
+# Let’s dive deeper into Object-Oriented Programming (OOP) concepts with more **real-world application development examples** and their practical relevance.
 
-
-
-Let’s dive deeper into Object-Oriented Programming (OOP) concepts with more **real-world application development examples** and their practical relevance.
-
----
 
 ## **1. Encapsulation in Real-Time Applications**
 
@@ -535,6 +529,11 @@ Let’s say we are building an **online food delivery system**:
 
 4. **Abstraction**:  
    Define abstract methods for `placeOrder()` and implement them differently for pickup and delivery orders.
+
+---
+
+### **Conclusion**
+OOP in PHP helps write cleaner, reusable, and modular code. It organizes programs into **classes** and **objects**, which is similar to how real-life things are organized. Happy Coding! 😊
 
 ---
 
