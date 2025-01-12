@@ -1,0 +1,133 @@
+
+
+What is sessions? Where sessions stored in PHP? Explain with real time suitable example used in application development in an easiest simplest and easy to understand ways.
+
+
+What is cookies in PHP? How cookies used in PHP? Explain in deep details with real time suitable example used in application development in an easiest simplest and easy to understand ways.
+
+
+List data types in PHP ? Explain each with real time suitable example used in application development in an easiest simplest and easy to understand ways.
+
+
+What is default session time and path in PHP. How to change it ? Explain each with real time suitable example used in application development in an easiest simplest and easy to understand ways.
+
+-------------------------------
+NOT Done Yet
+
+What are PHP Magic Methods/Functions? List them and Explain each with real time suitable example used in application development in an easiest simplest and easy to understand ways.
+
+Is multiple inheritance supported in PHP ?
+
+What is difference between include,require,include_once and require_once() ? Explain each with real time suitable example used in application development in an easiest simplest and easy to understand ways.
+
+What is a composer in PHP? Explain each with real time suitable example used in application development in an easiest simplest and easy to understand ways.
+
+What is cURL in PHP ? Explain each with real time suitable example used in application development in an easiest simplest and easy to understand ways.
+
+What is the difference between == and === operator in PHP ? Explain each with real time suitable example.
+
+What is difference between strstr() and stristr() ?  Explain each with real time suitable example used in application development in an easiest simplest and easy to understand ways.
+
+
+What are different types of Print Functions available in PHP? Explain each with real time suitable example used in application development in an easiest simplest and easy to understand ways.
+
+What is difference between echo and print() ?  Explain each with real time suitable example used in application development in an easiest simplest and easy to understand ways.
+
+Code to upload a file in PHP ? Explain each with real time suitable example used in application development in an easiest simplest and easy to understand ways.
+
+How to get length of an array in PHP ? Explain each with real time suitable example
+
+Code to open file download dialog in PHP ? Explain each with real time suitable example used in application development in an easiest simplest and easy to understand ways.
+
+How to Pass JSON Data in a URL using CURL in PHP ? Explain each with real time suitable example
+
+How is a constant defined in a PHP script? Explain each with real time suitable example
+
+How to get no of arguments passed to a PHP Function?  Explain each with real time suitable example
+
+
+What are the encryption functions available in PHP ? Explain each with real time suitable example
+
+What is the difference between unset and unlink in PHP? Explain each with real time suitable example used in application development in an easiest simplest and easy to understand ways.
+
+How to get number of days between two given dates using PHP ? Explain each with real time suitable example used in application development in an easiest simplest and easy to understand ways.
+
+How will you calculate days between two dates in PHP? Explain each with real time suitable example used in application development in an easiest simplest and easy to understand ways.
+
+What is Cross-site scripting? Explain each with real time suitable example used in application development in an easiest simplest and easy to understand ways.
+
+What are the differences between GET and POST methods in form submitting, give the case where we can use get and we can use post methods? Explain each with real time suitable example used in application development in an easiest simplest and easy to understand ways.
+
+Why should I store logs in a database rather than a file? Explain each with real time suitable example used in application development in an easiest simplest and easy to understand ways.
+
+How can you get web browser’s details using PHP? Explain each with real time suitable example used in application development in an easiest simplest and easy to understand ways.
+
+How can you get user's IP address in PHP? Explain each with real time suitable example used in application development in an easiest simplest and easy to understand ways.
+
+How can you get user's real time location in PHP? Explain each with real time suitable example used in application development in an easiest simplest and easy to understand ways.
+
+How can you convert application's product based on user's native language and real time location in PHP? Explain each with real time suitable example used in application development in an easiest simplest and easy to understand ways.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+List all the methods of String mostly commonly used in PHP. Explain each of them in deeper details step by step with real life suitable example used in application development in an easiest simplest and easy to understanding ways. Don't just mention where to used in Real life Example, but write code for each method to show in support of your explanation with real life examples for all the  methods step by step in deeper details.
+
+
+
