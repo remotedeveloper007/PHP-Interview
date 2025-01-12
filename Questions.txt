@@ -33,6 +33,8 @@ What are different types of Print Functions available in PHP? Explain each with 
 
 What is difference between echo and print() ?  Explain each with real time suitable example used in application development in an easiest simplest and easy to understand ways.
 
+What are different types of Print Functions available in PHP? Explain each with real time suitable example used in application development in an easiest simplest and easy to understand ways.
+
 Code to upload a file in PHP ? Explain each with real time suitable example used in application development in an easiest simplest and easy to understand ways.
 
 How to get length of an array in PHP ? Explain each with real time suitable example
@@ -44,7 +46,6 @@ How to Pass JSON Data in a URL using CURL in PHP ? Explain each with real time s
 How is a constant defined in a PHP script? Explain each with real time suitable example
 
 How to get no of arguments passed to a PHP Function?  Explain each with real time suitable example
-
 
 What are the encryption functions available in PHP ? Explain each with real time suitable example
 

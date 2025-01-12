@@ -111,7 +111,96 @@ This product is on sale!
 
 ---
 
-### 3. **`str_replace()`**
+### 3. **`stristr()`**
+
+#### **Explanation:**
+The `stristr()` function in PHP is used to search for the first occurrence of a substring in a string, **case-insensitively**. Unlike `strpos()`, which returns the position of the first occurrence, `stristr()` returns the **portion of the string** starting from the first occurrence of the substring to the end. If the substring is not found, `stristr()` returns `false`.
+
+#### **Syntax:**
+```php
+stristr($haystack, $needle, $before_needle = false)
+```
+
+- `$haystack`: The input string to search in.
+- `$needle`: The substring to search for.
+- `$before_needle`: (Optional) If set to `true`, `stristr()` will return the part of the string before the first occurrence of the `$needle` instead of the part after it.
+
+#### **Real-life Example: Searching for a keyword in a product description**
+
+Imagine you are building an e-commerce application where you need to search for a product based on a keyword entered by the user. You want to check if the description contains the keyword (case-insensitively) and then show the portion of the description containing that keyword to highlight it.
+
+#### **Code Example:**
+```php
+// Product description
+$productDescription = "This is the latest model of our Smartphone. The new features make it stand out from the rest.";
+
+// Search keyword entered by user
+$searchKeyword = "smartphone";
+
+// Case-insensitive search for the keyword in the product description
+$found = stristr($productDescription, $searchKeyword);
+
+if ($found) {
+    echo "Keyword found: $found";
+} else {
+    echo "Keyword not found.";
+}
+```
+
+**Explanation of Output:**
+
+- The `stristr()` function is used to search for the word **"smartphone"** in the `$productDescription`.
+- The search is **case-insensitive**, so it will match both "Smartphone" and "smartphone".
+- If the substring is found, it returns the portion of the description starting from the first occurrence of the keyword until the end of the string.
+
+**Output:**
+```
+Keyword found: Smartphone. The new features make it stand out from the rest.
+```
+
+#### **Real-life Scenario Breakdown:**
+In an e-commerce platform, `stristr()` can be useful when:
+1. **Displaying matching content:** If a user searches for a product (e.g., "smartphone"), you can highlight the part of the product description where the keyword is found.
+2. **Case-insensitive searching:** It allows the user to search without worrying about the case (e.g., both "Smartphone" and "smartphone" should be matched).
+
+You can use this function to find relevant information in product descriptions, user reviews, and other textual content in your application.
+
+#### **Example with `before_needle` parameter:**
+If you want to get the portion of the string before the keyword, you can pass `true` as the third parameter.
+
+```php
+// Search keyword entered by user
+$searchKeyword = "smartphone";
+
+// Get the part of the description before the first occurrence of the keyword
+$beforeKeyword = stristr($productDescription, $searchKeyword, true);
+
+if ($beforeKeyword) {
+    echo "Text before keyword: $beforeKeyword";
+} else {
+    echo "Keyword not found.";
+}
+```
+
+**Output:**
+```
+Text before keyword: This is the latest model of our 
+```
+
+This would be useful if you want to show the context **before** the keyword for some reason, such as when displaying search results and wanting to show the leading context for better relevance.
+
+---
+
+### **Summary:**
+- `stristr()` is great for **case-insensitive** substring searching.
+- It returns the part of the string **from the first occurrence** of the substring to the end.
+- You can use it in scenarios like **searching** and **highlighting** keywords in content, making it very useful for building **search features** in applications like e-commerce platforms, blogs, and more.
+
+By using `stristr()`, you ensure that searches are flexible and user-friendly, especially when users might not be aware of case sensitivity.
+
+---
+
+### 4. **`str_replace()`**
 
 #### Explanation:
 The `str_replace()` function is used to replace all occurrences of a substring with another substring. It’s commonly used for modifying strings, such as sanitizing inputs or replacing unwanted characters.
@@ -137,7 +226,7 @@ This is an amazing product
 
 ---
 
-### 4. **`substr()`**
+### 5. **`substr()`**
 
 #### Explanation:
 The `substr()` function returns a part of a string, starting from a specified position for a specified length. This is useful for extracting portions of a string.
@@ -163,7 +252,7 @@ Category Code: A12
 
 ---
 
-### 5. **`trim()`**
+### 6. **`trim()`**
 
 #### Explanation:
 The `trim()` function removes whitespace (or other specified characters) from the beginning and end of a string. This is commonly used to clean user inputs before storing them in a database.
@@ -189,7 +278,7 @@ Cleaned input: 'Username123'
 
 ---
 
-### 6. **`ucwords()`**
+### 7. **`ucwords()`**
 
 #### Explanation:
 The `ucwords()` function capitalizes the first letter of each word in a string. This is particularly useful when formatting titles or headings.
@@ -215,7 +304,7 @@ New Smartphone For Sale
 
 ---
 
-### 7. **`strtolower()` and `strtoupper()`**
+### 8. **`strtolower()` and `strtoupper()`**
 
 #### Explanation:
 The `strtolower()` function converts all characters of a string to lowercase, while `strtoupper()` converts all characters to uppercase. These are useful for case-insensitive comparisons or normalizing user input.
@@ -244,7 +333,7 @@ Category found!
 
 ---
 
-### 8. **`explode()`**
+### 9. **`explode()`**
 
 #### Explanation:
 The `explode()` function splits a string into an array based on a specified delimiter. It’s useful for parsing comma-separated values or processing form data.
@@ -277,7 +366,7 @@ Array
 
 ---
 
-### 9. **`implode()`**
+### 10. **`implode()`**
 
 #### Explanation:
 The `implode()` function is the opposite of `explode()`. It joins array elements into a string, using a specified delimiter. This is useful for generating CSV strings or joining array elements into a formatted string.
@@ -303,7 +392,7 @@ Product IDs: 101, 102, 103, 104
 
 ---
 
-### 10. **`str_repeat()`**
+### 11. **`str_repeat()`**
 
 #### Explanation:
 The `str_repeat()` function repeats a string a specified number of times. This is useful for generating repeated patterns or formatting output.
@@ -329,7 +418,7 @@ Sale! Sale! Sale!
 
 ---
 
-### 11. **`nl2br()`**
+### 12. **`nl2br()`**
 
 #### Explanation:
 The `nl2br()` function converts newline characters (`\n`) to HTML line breaks (`<br>`). This is useful for formatting multi-line text in HTML output.
@@ -355,7 +444,7 @@ This product is amazing.<br>It has great features.<br>Buy now and enjoy!
 
 ---
 
-### 12. **`substr_replace()`**
+### 13. **`substr_replace()`**
 
 #### Explanation:
 The `substr_replace()` function replaces a part of a string with another string, starting at a specific position and for a specific length. This can be useful for editing or modifying parts of a string.
