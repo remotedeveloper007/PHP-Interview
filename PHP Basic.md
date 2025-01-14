@@ -567,7 +567,7 @@ In a blog system, an array can be used to store multiple tags related to a blog 
 
 ---
 
-## Array Methods
+## 5.a: Array Methods
 
 In PHP, arrays are fundamental structures used to store multiple values in a single variable. There are several array methods in PHP that help in manipulating and working with arrays effectively. Here’s a breakdown of the most commonly used array methods, explained with real-time examples to help you understand how each of them can be utilized in application development.
 
@@ -1375,6 +1375,322 @@ Product is in the cart
 These are some of the most commonly used array functions in PHP, each serving different purposes when working with arrays in real-time applications. They allow developers to manipulate arrays in flexible and efficient ways, supporting various tasks like adding/removing items, filtering data, merging arrays, and more. Understanding these functions will significantly improve your ability to handle data within PHP applications.
 
 All examples should provide a thorough understanding of how each of these array functions can be used in real-world applications like an e-commerce website.
+
+---
+
+## 5.b: Array Sorting Method
+
+Array sorting is a fundamental part of working with arrays in PHP. There are several ways to sort arrays depending on the type of sorting (ascending, descending, associative arrays, etc.). Below, I'll explain the most common array sorting methods in PHP, with simple real-world examples of how they can be applied in application development.
+
+### 1. **`sort()` - Simple Sort (Ascending Order)**
+
+The `sort()` function sorts the values of an array in ascending order. It reorders the array without preserving the keys (the original array keys are discarded).
+
+#### Example:
+Imagine you are creating a product listing page, and you want to sort the products by price in ascending order.
+
+```php
+$products = [
+    'Product A' => 20,
+    'Product B' => 50,
+    'Product C' => 30,
+];
+
+// Sort by values (prices) in ascending order
+sort($products);
+
+print_r($products);
+```
+
+#### Output:
+```
+Array
+(
+    [0] => 20
+    [1] => 30
+    [2] => 50
+)
+```
+
+### 2. **`rsort()` - Reverse Sort (Descending Order)**
+
+The `rsort()` function sorts the array in descending order. Like `sort()`, it discards the original keys.
+
+#### Example:
+In the product listing page, you may want to sort the products by price in descending order.
+
+```php
+$products = [
+    'Product A' => 20,
+    'Product B' => 50,
+    'Product C' => 30,
+];
+
+// Sort by values (prices) in descending order
+rsort($products);
+
+print_r($products);
+```
+
+#### Output:
+```
+Array
+(
+    [0] => 50
+    [1] => 30
+    [2] => 20
+)
+```
+
+### 3. **`asort()` - Sort While Maintaining Keys (Ascending Order)**
+
+The `asort()` function sorts the array in ascending order by value but **keeps the keys intact**. This is useful when you need to maintain key-value relationships, like sorting a list of products by price but still keeping the product names.
+
+#### Example:
+If you want to display products sorted by price but preserve the original product names as keys:
+
+```php
+$products = [
+    'Product A' => 20,
+    'Product B' => 50,
+    'Product C' => 30,
+];
+
+// Sort by values (prices) in ascending order, keeping the keys intact
+asort($products);
+
+print_r($products);
+```
+
+#### Output:
+```
+Array
+(
+    [Product A] => 20
+    [Product C] => 30
+    [Product B] => 50
+)
+```
+
+### 4. **`arsort()` - Reverse Sort While Maintaining Keys (Descending Order)**
+
+The `arsort()` function sorts the array in descending order by value but **keeps the keys intact**. This is useful for sorting with reverse priority but still needing to track the original keys.
+
+#### Example:
+Suppose you want to sort a list of items by stock quantity (in descending order) but keep track of the product names.
+
+```php
+$products = [
+    'Product A' => 20,
+    'Product B' => 50,
+    'Product C' => 30,
+];
+
+// Sort by values (stocks) in descending order, keeping the keys intact
+arsort($products);
+
+print_r($products);
+```
+
+#### Output:
+```
+Array
+(
+    [Product B] => 50
+    [Product C] => 30
+    [Product A] => 20
+)
+```
+
+### 5. **`ksort()` - Sort by Keys (Ascending Order)**
+
+The `ksort()` function sorts the array by **keys** in ascending order, not by values.
+
+#### Example:
+If you have a list of user data and you want to sort them based on user IDs (keys) in ascending order:
+
+```php
+$users = [
+    5 => 'John',
+    1 => 'Alice',
+    3 => 'Bob',
+];
+
+// Sort by keys (user IDs) in ascending order
+ksort($users);
+
+print_r($users);
+```
+
+#### Output:
+```
+Array
+(
+    [1] => Alice
+    [3] => Bob
+    [5] => John
+)
+```
+
+### 6. **`krsort()` - Reverse Sort by Keys (Descending Order)**
+
+The `krsort()` function sorts the array by **keys** in descending order.
+
+#### Example:
+If you want to sort the user data by descending user IDs:
+
+```php
+$users = [
+    5 => 'John',
+    1 => 'Alice',
+    3 => 'Bob',
+];
+
+// Sort by keys (user IDs) in descending order
+krsort($users);
+
+print_r($users);
+```
+
+#### Output:
+```
+Array
+(
+    [5] => John
+    [3] => Bob
+    [1] => Alice
+)
+```
+
+### 7. **`usort()` - Custom Sort Using a Callback Function**
+
+The `usort()` function allows you to define a custom sorting logic via a callback function. This is helpful when you want to sort based on more complex conditions.
+
+#### Example:
+Let’s say you are working on a movie list and you want to sort movies by their release year.
+
+```php
+$movies = [
+    ['title' => 'Movie A', 'year' => 2020],
+    ['title' => 'Movie B', 'year' => 2018],
+    ['title' => 'Movie C', 'year' => 2022],
+];
+
+// Sort movies by year (ascending order)
+usort($movies, function ($a, $b) {
+    return $a['year'] <=> $b['year'];  // Compare years
+});
+
+print_r($movies);
+```
+
+#### Output:
+```
+Array
+(
+    [0] => Array
+        (
+            [title] => Movie B
+            [year] => 2018
+        )
+
+    [1] => Array
+        (
+            [title] => Movie A
+            [year] => 2020
+        )
+
+    [2] => Array
+        (
+            [title] => Movie C
+            [year] => 2022
+        )
+)
+```
+
+### 8. **`uasort()` - Custom Sort While Maintaining Keys**
+
+The `uasort()` function allows you to perform a custom sort on an array and **maintain the keys** during sorting.
+
+#### Example:
+Let’s sort the same movie array by year while keeping the original keys:
+
+```php
+$movies = [
+    1 => ['title' => 'Movie A', 'year' => 2020],
+    2 => ['title' => 'Movie B', 'year' => 2018],
+    3 => ['title' => 'Movie C', 'year' => 2022],
+];
+
+// Custom sort by year (ascending order), keeping keys intact
+uasort($movies, function ($a, $b) {
+    return $a['year'] <=> $b['year'];
+});
+
+print_r($movies);
+```
+
+#### Output:
+```
+Array
+(
+    [2] => Array
+        (
+            [title] => Movie B
+            [year] => 2018
+        )
+
+    [1] => Array
+        (
+            [title] => Movie A
+            [year] => 2020
+        )
+
+    [3] => Array
+        (
+            [title] => Movie C
+            [year] => 2022
+        )
+)
+```
+
+### 9. **`array_multisort()` - Sort Multiple Arrays**
+
+The `array_multisort()` function allows you to sort multiple arrays simultaneously based on the values of one or more arrays.
+
+#### Example:
+You may want to sort both an array of names and an array of corresponding scores, so that they align correctly.
+
+```php
+$names = ['Alice', 'Bob', 'Charlie'];
+$scores = [85, 92, 78];
+
+// Sort scores in descending order and reorder names accordingly
+array_multisort($scores, SORT_DESC, $names);
+
+print_r($names);
+print_r($scores);
+```
+
+#### Output:
+```
+Array
+(
+    [0] => Bob
+    [1] => Alice
+    [2] => Charlie
+)
+Array
+(
+    [0] => 92
+    [1] => 85
+    [2] => 78
+)
+```
+
+### Conclusion:
+
+PHP provides a variety of array sorting functions that can be applied in different real-world application development scenarios. You can sort arrays by values, keys, in ascending or descending order, and even use custom sorting logic with a callback function. The choice of sorting function depends on your specific use case, whether you're sorting by values, keys, or need to maintain the association between keys and values.
 
 ---
 
