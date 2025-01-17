@@ -537,3 +537,175 @@ OOP in PHP helps write cleaner, reusable, and modular code. It organizes program
 
 ---
 
+# Object-Oriented Programming (OOP) in PHP is a programming paradigm that organizes code into objects, which are instances of classes. OOP promotes better code reusability, modularity, and easier maintenance. Here are the main features of OOP in PHP:
+
+### 1. **Classes and Objects**
+   - **Class**: A class is a blueprint or template for creating objects. It defines properties (variables) and methods (functions) that the object can use.
+   - **Object**: An object is an instance of a class. It is created using the `new` keyword and can have its own property values and methods.
+
+   ```php
+   class Car {
+       public $color;
+       public $model;
+       
+       public function startEngine() {
+           echo "Engine started.";
+       }
+   }
+   
+   $car1 = new Car();
+   $car1->color = "Red";
+   $car1->startEngine();
+   ```
+
+### 2. **Encapsulation**
+   Encapsulation is the concept of bundling data (properties) and methods that operate on that data into a single unit, i.e., a class. It also restricts direct access to some of the object's components, which is typically achieved using visibility keywords.
+
+   - **Public**: The property or method can be accessed from anywhere.
+   - **Private**: The property or method can only be accessed within the class.
+   - **Protected**: The property or method can be accessed within the class and by inheriting classes.
+
+   ```php
+   class User {
+       private $name;
+       public function setName($name) {
+           $this->name = $name;
+       }
+       public function getName() {
+           return $this->name;
+       }
+   }
+   ```
+
+### 3. **Inheritance**
+   Inheritance allows a class to inherit properties and methods from another class. The class inheriting the properties and methods is called the subclass or child class, and the class being inherited from is the superclass or parent class.
+
+   - A child class can override or extend the functionality of methods in the parent class.
+
+   ```php
+   class Animal {
+       public function speak() {
+           echo "Animal speaks";
+       }
+   }
+
+   class Dog extends Animal {
+       public function speak() {
+           echo "Bark!";
+       }
+   }
+
+   $dog = new Dog();
+   $dog->speak(); // Outputs: Bark!
+   ```
+
+### 4. **Polymorphism**
+   Polymorphism allows objects of different classes to be treated as objects of a common superclass. It also allows the same method to behave differently depending on the object it is acting on.
+
+   - **Method Overloading**: In PHP, method overloading is typically handled by magic methods like `__call`.
+   - **Method Overriding**: This occurs when a subclass provides a specific implementation of a method that is already defined in its parent class.
+
+   ```php
+   class Shape {
+       public function draw() {
+           echo "Drawing Shape";
+       }
+   }
+
+   class Circle extends Shape {
+       public function draw() {
+           echo "Drawing Circle";
+       }
+   }
+
+   $circle = new Circle();
+   $circle->draw();  // Outputs: Drawing Circle
+   ```
+
+### 5. **Abstraction**
+   Abstraction involves hiding the complex implementation details of a system and exposing only the essential features. In PHP, abstract classes and interfaces are used to achieve abstraction.
+
+   - **Abstract Classes**: A class that cannot be instantiated on its own and must be extended by a child class.
+   - **Interfaces**: A contract that defines methods that must be implemented by the classes that implement the interface.
+
+   ```php
+   abstract class Animal {
+       abstract public function sound();
+   }
+
+   class Dog extends Animal {
+       public function sound() {
+           echo "Bark!";
+       }
+   }
+
+   $dog = new Dog();
+   $dog->sound();  // Outputs: Bark!
+   ```
+
+### 6. **Constructors and Destructors**
+   - **Constructor (`__construct`)**: A special method that is called when an object is instantiated. It is used to initialize properties or perform setup tasks.
+   - **Destructor (`__destruct`)**: A special method that is called when an object is destroyed (or when the script finishes executing).
+
+   ```php
+   class Person {
+       public $name;
+       public function __construct($name) {
+           $this->name = $name;
+       }
+       public function __destruct() {
+           echo "Object of {$this->name} is being destroyed.";
+       }
+   }
+   $person = new Person("John");
+   ```
+
+### 7. **Static Methods and Properties**
+   Static methods and properties are associated with a class rather than an instance of the class. They can be accessed without creating an object of the class.
+
+   ```php
+   class Counter {
+       public static $count = 0;
+       public static function increment() {
+           self::$count++;
+       }
+   }
+
+   Counter::increment();
+   echo Counter::$count;  // Outputs: 1
+   ```
+
+### 8. **Traits**
+   Traits allow code reuse in single inheritance languages like PHP. A trait is similar to a class, but it is intended to group functionality that can be shared across multiple classes.
+
+   ```php
+   trait Logger {
+       public function log($message) {
+           echo $message;
+       }
+   }
+
+   class User {
+       use Logger;
+   }
+
+   $user = new User();
+   $user->log("This is a log message.");
+   ```
+
+### 9. **Interfaces**
+   Interfaces allow defining a contract that other classes must follow, ensuring they implement all methods declared in the interface.
+
+   ```php
+   interface AnimalInterface {
+       public function makeSound();
+   }
+
+   class Cat implements AnimalInterface {
+       public function makeSound() {
+           echo "Meow";
+       }
+   }
+   ```
+
+In conclusion, OOP in PHP helps in organizing code in a more structured and manageable way, promoting reusability, security, and flexibility. The key features — classes, objects, inheritance, polymorphism, abstraction, and encapsulation — are the foundation of writing robust and maintainable PHP applications.

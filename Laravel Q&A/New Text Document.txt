@@ -1,0 +1,10 @@
+https://www.turing.com/interview-questions/laravel
+
+Service Container
+Collection
+Service Provider
+Facades
+Request
+Event
+Explain throttling
+create and dispatch jobs in Laravel
